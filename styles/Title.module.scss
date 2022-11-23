@@ -1,0 +1,62 @@
+@import './vars.scss';
+@import './mixins.scss';
+
+.title {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-areas: 't t t t b';
+  grid-template-rows: 100%;
+  grid-gap: 30px;
+  margin-bottom: 40px;
+  & h1 {
+    grid-area: t;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    & a {
+      width: 20px;
+      height: 25px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 20px;
+      & svg {
+        & path {
+          fill: $second;
+        }
+      }
+      &:hover {
+        & svg path {
+          fill: $orange;
+        }
+      }
+    }
+    & span {
+      font-weight: 600;
+      font-size: 27px;
+      line-height: 27px;
+      color: $second;
+    }
+  }
+  &__button {
+    grid-area: b;
+    width: 100%;
+    height: 33px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $orange;
+    border: 1px solid $orange;
+    border-radius: 10px;
+    color: $white;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px;
+    &:hover {
+      background: $white;
+      color: $second;
+    }
+  }
+}

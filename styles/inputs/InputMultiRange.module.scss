@@ -1,0 +1,82 @@
+@import '../vars.scss';
+@import '../mixins.scss';
+
+.multi_range {
+  position: relative !important;
+  width: 100%;
+  &__track, &__range {
+    position: absolute !important;
+    height: 5px;
+    border-radius: 3px;
+  }
+  &__track {
+    width: 100%;
+    background-color: $main;
+    z-index: 1 !important;
+  }
+  &__range {
+    background-color: $orange-before;
+    z-index: 2 !important;
+  }
+  &__left, &__right {
+    color: $second;
+    font-size: 12px;
+    margin-top: 20px;
+    position: absolute !important; 
+  }
+  &__left {
+    left: 6px;
+  }
+  &__right {
+    right: -4px;
+  }
+}
+
+.thumb {
+  -webkit-appearance: none;
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    -webkit-tap-highlight-color: transparent;
+    background-color: $orange;
+  }
+  pointer-events: none;
+  position: absolute !important;
+  height: 0;
+  width: 100%;
+  outline: none;
+  &_zindex {
+    &_3 {
+      z-index: 3 !important;
+    }
+    &_4 {
+      z-index: 4 !important;
+    }
+    &_5 {
+      z-index: 5 !important;
+    }
+  }
+  &::-webkit-slider-thumb {
+    background-color: $orange;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    height: 13px;
+    width: 13px;
+    margin-top: 4px;
+    pointer-events: all;
+    position: relative !important;
+  }
+  &::-moz-range-thumb {
+    background-color: $orange;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    height: 18px;
+    width: 18px;
+    margin-top: 4px;
+    pointer-events: all;
+    position: relative !important;
+  }
+}
+
+@include riStyle($vk, $vk-hover);

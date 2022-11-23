@@ -1,0 +1,131 @@
+@import '../vars.scss';
+@import '../mixins.scss';
+
+.telegram {
+  & .title {
+    @include tStyle($telegram, $telegram, $telegram, $telegram);
+  }
+  &__analys {
+    position: relative;
+    height: calc(100vh - 193px);
+    @include bStyle();
+    padding: 20px;
+    overflow: hidden;
+    border-radius: 20px;
+    &_form {
+      position: absolute !important;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 40px;
+      z-index: 5;
+      @include bStyle();
+      padding: 20px;
+      overflow: hidden;
+      border-radius: 20px;
+      width: 500px;
+      & h2 {
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 26px;
+        margin-bottom: 30px;
+      }
+      & .form {
+        &__button {
+          @include fbStyle($telegram, $telegram30);
+        }
+      }
+    }
+    &_image {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      & img {
+        width: 65% !important;
+        height: 65% !important;
+      }
+    }
+  }
+  &__database {
+    position: relative;
+    width: 100%;
+    &_table {
+      width: 100%;
+      height: 100%;
+      overflow-y: scroll;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+    &_filters {
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      &_block {
+
+      }
+      &_search {
+        position: relative !important;
+        width: 350px;
+        height: 35px;
+        @include bStyle();
+        padding: 10px 15px;
+        font-size: 14px;
+        line-height: 20px;
+        border: 1px solid $telegram;
+      }
+      &_select {
+        width: 200px !important;
+        height: 35px !important;
+        margin-bottom: 0 !important;
+        margin-left: 15px !important;
+        @include bStyle();
+        overflow: initial !important;
+        &_items {
+          height: 300px !important;
+          overflow-y: scroll;
+          &::-webkit-scrollbar {
+            width: 0;
+          }
+          & div {
+            height: fit-content;
+          }
+        }
+      }
+      &_clear {
+        margin-right: 0;
+        margin-left: 20px;
+        width: 125px;
+        border-radius: 20px;
+        height: 35px;
+        background: $telegram;
+        border: 1px solid $telegram;
+        font-size: 14px;
+        line-height: 20px;
+        color: $white !important;
+        &:first-child {
+          margin-left: auto;
+        }
+        &:hover {
+          background: $red;
+          color: $white;
+          border-color: $red;
+        }
+      }
+    }
+  }
+  & .table {
+    &__head {
+      @include tbhStyle($telegram50, $telegram);
+      overflow: hidden;
+    }
+    &__row {
+      @include tbSyle(transparent, $light-grey);
+    }
+  }
+}

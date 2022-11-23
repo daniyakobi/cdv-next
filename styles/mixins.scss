@@ -1,0 +1,228 @@
+// Оформление страниц анализа
+// Сайдбар
+@mixin sStyle($color) {
+  &::before {
+    background: $color;
+  }
+  & .sidebar__logo {
+    & span {
+      background: $color;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+    }
+  }
+}
+// Меню
+@mixin mStyle($color, $text) {
+  & .menu__item {
+    &:hover {
+      & a {
+        & svg {
+          & path {
+            fill: $color;
+          }
+        }
+      }
+    }
+    & a {
+      &.active {
+        background: $color;
+        & svg {
+          & path {
+            fill: $white;
+          }
+        }
+        &:hover {
+          background: $color;
+          & svg {
+            & path {
+              fill: $white;
+            }
+          }
+        }
+      }
+    }
+    & ul {
+      & li {
+        & a {
+          &:hover {
+            color: $color;
+          }
+          &.active {
+            color: $text;
+            &:hover {
+              color: $text;
+            }
+            &::before {
+              background: $color;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+// Карточка соц. сети
+@mixin ssCard($color) {
+  & div {
+    background: $color;
+  }
+  &:hover {
+    background: $color;
+    & div {
+      filter: drop-shadow(0px 0px 30px rgba(43, 43, 70, 0.5));
+    }
+    & span {
+      margin-bottom: 40px;
+    }
+  }
+}
+// Заголовок в соц. сетях
+@mixin tStyle($color, $text, $border, $svg) {
+  & h1 {
+    & a {
+      &:hover {
+        & svg path {
+          fill: $svg !important;
+        }
+      }
+    }
+  }
+  &__button {
+    background: $color !important;
+    border: 1px solid $border !important;
+    &:hover {
+      background: $white !important;
+      color: $text !important;
+    }
+  }
+}
+// Блок 
+@mixin bStyle() {
+  position: relative;
+  border-radius: 20px;
+  padding: 15px;
+  border: $border-color;
+  overflow: hidden;
+  &::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: $glass;
+    backdrop-filter: blur(15px);
+    z-index: 1;
+    border-radius: 20px;
+  }
+  & * {
+    position: relative;
+    z-index: 2;
+    color: $second;
+  }
+}
+// Селект
+@mixin selectStyle($color) {
+  & .select__item {
+    &:hover, &.active {
+      & .select__item_icon {
+        & svg path {
+          stroke: $color !important;
+        }
+      }
+    }
+  }
+  & .select__arrow {
+    &.active {
+      & svg path {
+        stroke: $color !important;
+      }
+    }
+  }
+  &:hover {
+    .select__arrow {
+      & svg path {
+        stroke: $color !important;
+      }
+    }
+  }
+}
+// Range input
+@mixin riStyle($color, $track) {
+  .multi_range {
+    &__range {
+      background-color: $track !important;
+    }
+  }
+  .thumb {
+    &::-webkit-slider-thumb {
+      background-color: $color !important;
+    }
+    &::-webkit-slider-thumb {
+      background-color: $color !important;
+    }
+    &::-moz-range-thumb {
+      background-color: $color !important;
+    }
+  }
+}
+// Кнопка в форме 
+@mixin fbStyle($color, $hover-color) {
+  background: $color !important;
+  border: 1px solid $color !important;
+  color: $white !important;
+  &:hover {
+    background: $hover-color !important;
+    color: $color !important;
+    border-color: $color !important;
+  }
+}
+// Стиль шапки таблицы
+@mixin tbhStyle($color, $border) {
+  border-bottom: 1px solid $border;
+  border-top: 1px solid $border;
+  background-color: $color;
+  & .table__column {
+    border-left: 1px solid $border;
+    &_block {
+      & .table__column {
+        border-left: none !important;
+        &:not(:last-child) {
+          border-right: 1px solid $border !important;
+        }
+        &:last-child {
+          border-width: 0;
+        }
+      }
+    }
+    & p {
+      text-align: center;
+    }
+    &:last-child {
+      border-right: 1px solid $border;
+    }
+  }
+}
+// Стиль таблицы
+@mixin tbSyle($color, $border) {
+  border-bottom: 1px solid $border !important;
+  &:nth-child(2n) {
+    background-color: $color !important;
+  }
+  & .table__column {
+    &:last-child {
+      border-right: 1px solid $border !important;
+    }
+    &_block {
+      & .table__column {
+        border-left: none !important;
+        &:not(:last-child) {
+          border-right: 1px solid $border !important;
+        }
+      }
+    }
+  }
+}

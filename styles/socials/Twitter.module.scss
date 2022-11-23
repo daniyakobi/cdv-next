@@ -1,0 +1,8 @@
+@import '../vars.scss';
+@import '../mixins.scss';
+
+.twitter {
+  & .title {
+    @include tStyle($twitter, $twitter, $twitter, $twitter);
+  }
+}

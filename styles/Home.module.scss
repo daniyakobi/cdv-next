@@ -1,0 +1,62 @@
+@import './vars.scss';
+@import './mixins.scss';
+
+.home {
+  &__title {
+    margin-bottom: 40px;
+  }
+  &__modules {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+  &__module {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 23%;
+    height: 285px;
+    border-radius: 10px;
+    padding: 15px;
+    background: $white;
+    border: 1px solid $border-color;
+    filter: none;
+    &:not(:nth-child(4n), :last-child) {
+      margin-right: 2%;
+    }
+    &:nth-child(1), &:nth-child(2), &:nth-child(3), &:nth-child(4) {
+      margin-bottom: 2%;
+    }
+    & div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 135px;
+      height: 135px;
+      border-radius: 50%;
+      filter: none;
+      margin-bottom: 25px;
+    }
+    & span {
+      font-weight: 300;
+      font-size: 27px;
+      line-height: 32px;
+      color: $second;
+    }
+    &:hover {
+      & span {
+        color: $white;
+      }
+    }
+    &.vk { @include ssCard($vk); }
+    &.telegram { @include ssCard($telegram); }
+    &.facebook { @include ssCard($facebook); }
+    &.twitter { @include ssCard($twitter); }
+    &.inst { @include ssCard($inst); }
+    &.youtube { @include ssCard($youtube); }
+    &.tiktok { @include ssCard($tiktok); }
+  }
+}

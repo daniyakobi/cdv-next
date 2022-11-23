@@ -1,0 +1,105 @@
+@import './vars.scss';
+@import './mixins.scss';
+
+.sidebar {
+  min-width: $sidebar-width;
+  width: $sidebar-width;
+  min-height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  padding: 10px 0 50px 10px;
+  background-color: $white;
+  &::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 3px;
+    height: 100%;
+    background: $orange;
+  }
+  &__logo {
+    width: 100%;
+    padding-right: 10px;
+    text-align: center;
+    font-weight: 300;
+    font-size: 19px;
+    line-height: 20px;
+    color: $second;
+    margin-bottom: 50px;
+    & span {
+      background: $text-orange-gradient;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+    }
+  }
+  &__user {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 40px;
+    padding-right: 10px;
+    & span {
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 19px;
+      color: $second;
+      margin-top: 10px;
+    }
+    &:hover {
+      & span {
+        font-weight: 500;
+      }
+    }
+  }
+  &__menu {
+    width: 100%;
+    height: calc(100vh - 304px);
+  }
+  &__logout { 
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 0;
+    margin-top: auto;
+    height: 35px;
+    width: 100%;
+    padding-left: 17px;
+    border-radius: 50px;
+    & span {
+      width: 100%;
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 18px;
+      color: $second;
+    }
+    & svg {
+      margin-right: 10px;
+      & path {
+        fill: $second;
+      }
+    }
+    &:hover {
+      & span {
+        color: $red;
+      }
+      & svg {
+        & path {
+          fill: $red;
+        }
+      }
+    }
+  }
+  &.vk { @include sStyle($vk); }
+  &.telegram { @include sStyle($telegram); }
+  &.facebook { @include sStyle($facebook); }
+  &.twitter { @include sStyle($twitter); }
+  &.inst { @include sStyle($inst); }
+  &.youtube { @include sStyle($youtube); }
+  &.tiktok { @include sStyle($tiktok); }
+}

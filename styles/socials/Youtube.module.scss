@@ -1,0 +1,8 @@
+@import '../vars.scss';
+@import '../mixins.scss';
+
+.youtube {
+  & .title {
+    @include tStyle($youtube, $youtube, $youtube, $youtube);
+  }
+}

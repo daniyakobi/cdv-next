@@ -1,0 +1,8 @@
+@import '../vars.scss';
+@import '../mixins.scss';
+
+.tiktok {
+  & .title {
+    @include tStyle($tiktok, $second, $second, $second);
+  }
+}

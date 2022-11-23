@@ -1,0 +1,48 @@
+@import '../fonts/gilroy/stylesheet.scss';
+
+$main: #F7F7F8;
+$white: #FFFFFF;
+$second: #2B2B46;
+$orange: #FF6303;
+$orange50: #FF630350;
+$orange30: #FF630330;
+$orange20: #FF630320;
+$orange-after: #FFDE67; 
+$orange-before: #FE7E07; 
+$orange-gradient: linear-gradient(45deg, #FF8047 0%, #FF6302 53.52%, #FF6302 100%);
+$text-orange-gradient: linear-gradient(90deg, #FF6303 38.65%, #FF8046 100%);
+$blue: #69ADFF;
+$blueberry: #303150;
+$dark-blue: #002359;
+$light-grey: #BDBDBD;
+$grey: #7E7F90;
+$aquamarin-gradient: linear-gradient(246.01deg, rgba(180, 241, 241, 0.3) -19.94%, rgba(13, 186, 204, 0.7) 100%);
+$purple-gradient: linear-gradient(246.01deg, rgba(218, 192, 244, 0.3) -19.94%, rgba(143, 65, 222, 0.7) 100%);
+$light-purple-gradient: linear-gradient(225deg, #E3D6FF 0%, #9E7FE0 100%);
+$pink-gradient: linear-gradient(225deg, #FFC0DB 0%, #F18AB5 100%);
+$light-orange-gradient: linear-gradient(246.01deg, rgba(255, 214, 194, 0.3) -19.94%, rgba(255, 117, 53, 0.7) 100%);
+$green-gradient: linear-gradient(246.01deg, rgba(192, 244, 200, 0.3) -19.94%, rgba(48, 225, 76, 0.7) 100%);
+$blue-gradient: linear-gradient(45deg, #3886E6 0%, #9CC9FF 100%);
+$vk-gradient: linear-gradient(45deg, #2688EB 0%, #9CC9FF 100%);
+$green: #16E91F;
+$red: #FF0D0D;
+$border-color: rgba(189, 189, 189, 0.3);
+$vk: #2688EB;
+$vk30: #2688EB30;
+$vk-hover: #9CC9FF;
+$telegram: #45AEE4;
+$telegram30: #45AEE430;
+$telegram20: #45AEE420;
+$telegram50: #45AEE450;
+$inst: radial-gradient(126.96% 126.96% at 6.47% 97.81%, #FA8F21 9%, #D82D7E 78%);
+$facebook: #3D5A96;
+$twitter: #2AA3EF;
+$youtube: #F52929;
+$tiktok: linear-gradient(225deg, #2D2D2D 0%, #161616 100%);
+$glass: rgba(255, 255, 255, 0.5);
+
+$button-shadow: 0px 3px 8px rgba(0, 0, 0, 0.12), 0px 3px 1px rgba(0, 0, 0, 0.04);
+
+$sidebar-width: 223px;
+$tr3: all .3s linear;
+$font: 'Gilroy', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
